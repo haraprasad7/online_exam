@@ -1,0 +1,140 @@
+.column {
+  float: left;
+  width: 45%;
+  padding:10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  transition: all 0s;
+  cursor: pointer;
+  margin: 5px;
+  
+}
+.button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  
+}
+.button span {
+	font-size:16px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span.s1:after {
+  content: 'modify and delete options';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span.s1 {
+  padding-right: 200px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#update button{
+	padding:5px;
+	border-radius: 12px;
+	text-align:center;
+	height:50px;
+	width:200px;
+	
+}
+input {
+  width: 100%; 
+  padding: 12px 12px 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+#updateCol {
+	width:48%;
+	padding-right:10px;
+	float:left;
+	}
+	#updateCol2 {
+	width:48%;
+	padding-right:10px;
+	float:left;
+	}
+	#results{
+		clear:both;
+	}
+	li{
+			display:inline-block;
+	}
+	#results li{
+			display:inline-block;
+	}
+
+#results button{
+			padding:5px;
+		
+	border-radius: 12px;
+	text-align:center;
+	height:50px;
+	width:200px;
+	
+	}
+#showresults
+{
+	float:left;
+	width:360px;
+}
+#showresultsRIGHT
+{
+	margin-left:380px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align:center;
+  padding:10px;
+  background-color:rgba(0,0,255,0.1);
+  
+}
+th {
+  background-color: #EC360;
+  color: white;
+}
+
+tr:hover {background-color:rgba(255,255,0,0.5);}
+#question{
+	text-align:left;
+}
+#tbl{
+	
+}
+
+#sli
+{
+	padding-left:100px;
+}
+
+
+

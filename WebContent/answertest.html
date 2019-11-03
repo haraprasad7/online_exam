@@ -1,0 +1,47 @@
+<html>  
+<head> 
+<style type="text/css">
+	body{
+		overflow: auto;
+	}
+</style> 
+<script>  
+var request;  
+function sendInfo()  
+{  
+var v=678;  
+var url="answertest.jsp?val="+v;  
+  
+if(window.XMLHttpRequest){  
+request=new XMLHttpRequest();  
+}  
+else if(window.ActiveXObject){  
+request=new ActiveXObject("Microsoft.XMLHTTP");  
+}  
+  
+try{  
+request.onreadystatechange=getInfo;  
+request.open("GET",url,true);  
+request.send();  
+}catch(e){alert("Unable to connect to server");}  
+}  
+  
+function getInfo(){  
+if(request.readyState==4){  
+var val=request.responseText;  
+document.getElementById('amit').innerHTML=val;  
+}  
+}  
+  
+</script>  
+</head>  
+<body>  
+    <marquee><h1>This is an example of ajax</h1></marquee>  
+<form name="vinform">  
+Emter id:<input type="text" name="t1" onkeyup="sendInfo()">  
+</form>  
+<button onclick="sendInfo()">Click me</button>
+<h1>hello this is the thing i wanted to say<span id="amit"> </span></h1>
+  
+</body>  
+</html>  

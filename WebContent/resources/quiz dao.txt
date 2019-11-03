@@ -1,0 +1,23 @@
+public static int checkUser(String name,String password)
+	{
+		try 
+		{
+			Connection con=Provider.getMysqlConnection();
+			String sql="select type from users where name="+name+"password="+password;
+			PreparedStatement pst  = con.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			if(rs.next()) {
+				return rs.getInt(1);
+			}
+			else
+			{
+				return -1;
+			}
+				
+			}
+		catch(Exception e)
+		{
+			return -2;
+		}
+		
+	}

@@ -1,0 +1,71 @@
+[20:28, 29/10/2019] Guru: <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@page errorPage="errorpage.jsp" %>
+<%for(int i=0;i<4;i++) 
+{
+	
+	if(i==2)
+	{ 
+		int x=i/0;
+	}
+
+}%>
+</body>
+</html>
+[20:28, 29/10/2019] Guru: <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@page isErrorPage="true"  %>
+	RESOURCE NOT FOUND. AGAIN LOGIN
+</body>
+</html>
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@page isErrorPage="true"  %>
+	RESOURCE NOT FOUND. AGAIN LOGIN
+</body>
+</html>
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%for(int i=0;i<4;i++) 
+{
+	if(i==2)
+	{
+		%>
+		<jsp:forward page="errorpage.jsp"></jsp:forward>
+	<% }%>
+
+<%}%>
+</body>
+</html>

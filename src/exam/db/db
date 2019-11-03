@@ -1,0 +1,103 @@
+drop database online_exam;
+create database online_exam;
+
+use online_exam;
+
+drop table sub1;
+create table CCp
+(
+	slno integer(3) auto_increment,
+	qus varchar(300),
+	opt1 varchar(100),
+	opt2 varchar(100),
+	opt3 varchar(100),
+	opt4 varchar(100),
+	ans	 integer(1)
+	check(ans >=1 and ans<=4),
+	primary key(slno)
+);
+drop table dmdw;
+create table dmdwp
+(
+	slno integer(3) auto_increment,
+	qus varchar(300),
+	opt1 varchar(100),
+	opt2 varchar(100),
+	opt3 varchar(100),
+	opt4 varchar(100),
+	ans	 integer(1)
+	check(ans >=1 and ans<=4),
+	primary key(slno)
+);
+
+drop table os;
+create table osp
+(
+	slno integer(3) auto_increment,
+	qus varchar(300),
+	opt1 varchar(100),
+	opt2 varchar(100),
+	opt3 varchar(100),
+	opt4 varchar(100),
+	ans	 integer(1)
+	check(ans >=1 and ans<=4),
+	primary key(slno)
+);
+
+drop table ajp;
+create table acap
+(
+	slno integer(3) auto_increment,
+	qus varchar(300),
+	opt1 varchar(100),
+	opt2 varchar(100),
+	opt3 varchar(100),
+	opt4 varchar(100),
+	ans	 integer(1)
+	check(ans >=1 and ans<=4),
+	primary key(slno)
+);
+drop table users;
+create table users
+(
+	slno integer(3) auto_increment,
+	name varchar(300),
+	password varchar(100),
+	primary key(slno)
+);
+drop table admins;
+create table admins
+(
+	slno integer(3) auto_increment,
+	name varchar(300),
+	password varchar(100),
+	primary key(slno)
+);
+MariaDB [online_exam]> insert into admins (name,passowrd) values('admin1','1234');
+ERROR 1054 (42S22): Unknown column 'passowrd' in 'field list'
+MariaDB [online_exam]> insert into admins (name,password) values('admin1','1234');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [online_exam]> insert into admins (name,password) values('admin2','5678');
+Query OK, 1 row affected (0.73 sec)
+
+MariaDB [online_exam]> insert into users (name,password) values('hara','1234');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [online_exam]> insert into users (name,password) values('guru','5678');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [online_exam]> insert into users (name,password) values('ashu','0000');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [online_exam]> insert into users (name,password) values('dibya','2222');
+
+create table results
+(
+	slno integer(3) auto_increment,
+	name varchar(100),
+	subject varchar(10),
+	score integer(3),
+	primary key(slno)
+);
+----------------------------------------------------------------------------------------
